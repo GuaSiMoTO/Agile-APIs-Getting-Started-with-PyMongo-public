@@ -225,6 +225,9 @@ The response should include the details of the battle result:
 }
 ```
 
+## PokeIteration 7: **Deploy the Pokémon API with Uvicorn**
+
+
 ---
 
 ## PokeBonus: Level Up
