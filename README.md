@@ -155,7 +155,14 @@ Type (retrieved from the pokemon_types collection).
 GET /pokemon/{pokemon_id}/details
 
 
-## PokeIteration 6: Battle a Random Wild Pokémon
+## PokeIteration 6: **Deploy the Pokémon API with Uvicorn**
+
+
+---
+
+# PokeBonus
+
+## PokeBonus 1: Battle a Random Wild Pokémon
 
 In this exercise, you'll create an endpoint that selects a Pokémon from a specific trainer's team based on its position in the team, and makes it battle a random wild Pokémon encountered in the tall grass.
 
@@ -219,12 +226,9 @@ The response should include the details of the battle result:
 }
 ```
 
-## PokeIteration 7: **Deploy the Pokémon API with Uvicorn**
 
 
----
-
-## PokeBonus: Level Up
+## PokeBonus2: Level Up
 
 Now that your Pokémon has won a battle, it’s time to take the next step—evolve your Pokémon! In this exercise, you'll extend the functionality from the previous exercise to evolve the winning Pokémon (if it meets the criteria) and update the trainer's team with the evolved form.
 
