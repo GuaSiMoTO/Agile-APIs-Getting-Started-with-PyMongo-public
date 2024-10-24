@@ -126,22 +126,16 @@ In this exercise, you will create an endpoint that allows you to either release 
 - DELETE /team/{pokemon_id}/release: Release the Pokémon, permanently deleting it.
 
 
-## PokeIteration 4: View Pokémon Team
+## PokeIteration 4: Filter and Sort Pokémons
 
-Now that you’ve added Pokémon to your team, it’s time to view the entire team.
+Create an endpoint that allows trainers to filter pokemon by initial letter, group them by type, and sort them by their base_stats_hp using  aggregate pipelines.
 
-### Tasks:
-- Create an endpoint that retrieves all the Pokémon currently in your team.
-  
-### Response:
-- If the team is empty, return a message: "Your team has no Pokémon yet.".
-  
-### Example Postman Request:
-GET /team
+You’ll use multiple stages like $match, $group, $sort, and $project to build this pipeline and manipulate the data.
 
-## PokeIteration 5: View Pokémon with Abilities, Moves, and Type
 
-It's time to bring all the data together! In this exercise, you will create an endpoint that retrieves a Pokémon's full details, including its abilities, moves, and types.
+## PokeIteration 5: View Pokémon Team with Moves and Type
+
+It's time to bring all the data together! In this exercise, you will create an endpoint that retrieves a Pokémon's to your team full details, including its abilities, moves, and types.
 
 ### Tasks:
 
@@ -151,7 +145,7 @@ Moves (retrieved from the moves collection).
 Type (retrieved from the pokemon_types collection).
 
 ### Validations:
-- Ensure the Pokémon exists in the database.
+- Ensure the Pokémon exists in the Team.
 - Return a 404 Not Found if the Pokémon doesn’t exist.
   
 ### Error Handling:
