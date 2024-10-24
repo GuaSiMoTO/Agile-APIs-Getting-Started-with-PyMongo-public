@@ -2,8 +2,6 @@
 
 # Agile-APIs-Getting-Started-with-PyMongo
 
-# Extending the Pokémon API
-
 ## Introduction
 
 Welcome back, Trainers! Now that you've successfully built your Pokémon API, it's time to push it even further. The Pokémon world is vast, and there's still so much more to explore! In this set of exercises, you’ll be extending your existing Pokémon API, adding new features like assigning Pokémon to your team, evolving them, managing battles, and more.
