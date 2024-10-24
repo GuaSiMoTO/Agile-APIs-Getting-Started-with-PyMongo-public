@@ -102,7 +102,7 @@ Now that you've created a team for the trainer, you need to **add Pokémon** to 
 - `"Pikachu has been successfully added to the 'Ash's Team'."`
 
 
-### PokeIteration 3: **Release a Pokémon from the Team**
+## PokeIteration 3: **Release a Pokémon from the Team**
 
 In this exercise, you will create an endpoint that allows you to either release a Pokémon from your team. Releasing means letting go of the Pokémon
 
