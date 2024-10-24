@@ -201,7 +201,6 @@ The response should include the details of the battle result:
 {
   "trainer_pokemon": {
     "name": "Pikachu",
-    "level": 12,
     "hp": 35,
     "attack": 55,
     "defense": 40,
@@ -209,7 +208,6 @@ The response should include the details of the battle result:
   },
   "wild_pokemon": {
     "name": "Zubat",
-    "level": 8,
     "hp": 40,
     "attack": 45,
     "defense": 35,
@@ -222,4 +220,52 @@ The response should include the details of the battle result:
   }
 }
 ```
-f
+
+---
+
+## PokeBonus: Level Up
+
+Now that your Pokémon has won a battle, it’s time to take the next step—evolve your Pokémon! In this exercise, you'll extend the functionality from the previous exercise to evolve the winning Pokémon (if it meets the criteria) and update the trainer's team with the evolved form.
+
+Steps:
+1. Check the Pokémon evolve:
+   
+- After a successful battle, check if the Pokémon has an evolution available by looking up the evolves_to field.
+
+  
+2. Retrieve the evolved Pokémon:
+- Use the evolves_to field from the current Pokémon to find its next evolutionary form.
+- Fetch the new Pokémon data from the pokemon collection based on its ID (evolves_to).
+
+3. Update the team:
+- Use the previously implemented endpoint to remove the old Pokémon from the team.
+- Then, add the evolved Pokémon to the team, replacing the old form.
+  
+4. Response format:
+   
+The response should confirm the successful evolution, showing both the old Pokémon and the new evolved form.
+
+
+```json
+{
+  "trainer_pokemon": {
+    "name": "Bulbasaur",
+    "hp": 45,
+    "attack": 49,
+    "defense": 49,
+    "speed": 45,
+    "special_attack": 65,
+    "special_defense": 65
+  },
+  "evolved_pokemon": {
+    "name": "Ivysaur",
+    "hp": 60,
+    "attack": 62,
+    "defense": 63,
+    "speed": 60,
+    "special_attack": 80,
+    "special_defense": 80
+  },
+  "message": "Bulbasaur has evolved into Ivysaur and replaced in the team."
+}
+```
