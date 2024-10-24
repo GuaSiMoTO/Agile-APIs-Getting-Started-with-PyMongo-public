@@ -8,7 +8,7 @@ Welcome back, Trainers! Now that you've successfully built your Pokémon API, it
 
 You'll also implement new validation rules and error handling to ensure your API is robust and user-friendly. Get ready to level up your coding skills!
 
-Requirements
+## Requirements
 
 - Ensure your existing Pokémon API is up and running.
   
