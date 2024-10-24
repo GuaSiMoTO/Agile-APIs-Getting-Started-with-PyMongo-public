@@ -60,26 +60,16 @@ class TrainerSchema(BaseModel):
 
 ## **PokeIteration 1: Create Teams for Battles**
 
-In this exercise, you will create teams that will be used for Pokémon battles. We will implement an endpoint to **create a team** for either the player or the enemy.
+In this exercise, you will create teams that will be used for Pokémon battles. We will implement an endpoint to **create a team** for either the player.
 
 ### **Tasks:**
 - Create an endpoint to **create a new team**.
-- Each team can either be for the player or for the enemy.
-- Ensure that each trainer (player or enemy) can only have one active team at a time.
-
-### **Validations:**
-- Ensure that a team can only be created if the trainer (player or enemy) does not already have an active team.
-
-### **Error Handling:**
-- If the trainer already has an active team, return a **409 Conflict** error with the message: `"Trainer {trainer_id} already has an active team!"`.
 
 ### **Example Postman Request:**
 - `POST /team/create`
 
 ### **Response:**
 - `"Team 'Ash's Team' has been successfully created."`
-
-
 
 ## PokeIteration 2: Add Pokémon to a Team
 
