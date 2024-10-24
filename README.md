@@ -128,6 +128,8 @@ In this exercise, you will create an endpoint that allows you to either release 
 
 ## PokeIteration 4: Filter and Sort Pokémons
 
+### **Tasks:**
+
 Create an endpoint that allows trainers to filter pokemon by initial letter, group them by type, and sort them by their base_stats_hp using  aggregate pipelines.
 
 You’ll use multiple stages like $match, $group, $sort, and $project to build this pipeline and manipulate the data.
