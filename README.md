@@ -1,3 +1,5 @@
+![](https://user-images.githubusercontent.com/970858/63474771-d6734700-c469-11e9-83bb-9429da563909.png)
+
 # Agile-APIs-Getting-Started-with-PyMongo
 
 # Extending the Pokémon API
@@ -11,6 +13,8 @@ You'll also implement new validation rules and error handling to ensure your API
 Requirements
 
 - Ensure your existing Pokémon API is up and running.
+  
+- [Learn how to fork this repo](https://guides.github.com/activities/forking/)
 
 - Clone this repo into your code/labs folder
 
@@ -269,3 +273,15 @@ The response should confirm the successful evolution, showing both the old Poké
   "message": "Bulbasaur has evolved into Ivysaur and replaced in the team."
 }
 ```
+## Submission
+
+Upon completion, run the following commands:
+```
+$ git add .
+$ git commit -m "done"
+$ git push origin main
+```
+
+Then create a Pull Request!!
+
+![happy_coding](https://user-images.githubusercontent.com/970858/63899010-c23fc480-c9ea-11e9-84a2-542907e42362.png)
