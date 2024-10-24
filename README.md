@@ -38,6 +38,24 @@ Before diving into coding, it's essential to ensure your project is structured f
 - Views: In this context, the "views" are the routes that handle incoming HTTP requests (like GET, POST).
   
 - Controllers: These contain the business logic that connects the models and routes. They handle operations like adding Pokémon to a team or battling.
+  
+- Schemas: Using Pydantic, these schemas ensure that incoming and outgoing data conforms to the correct type and format, matching the structure of the database. This guarantees that only valid data is processed by the API.
+
+> ⚠️ **WARNING:** The use of Pydantic schemas is crucial to ensure that all data sent to the API is correctly validated. The schemas match the structure of the data stored in the database, ensuring typographical security and consistency.Any enpoint that requires a schema and does not have one will not be counted as valid. 
+
+### Example TrainerSchema
+
+```python
+class TrainerSchema(BaseModel):
+    trainer_id: int
+    name: str
+    team: List[int]  # List of Pokémon IDs in the team
+    storage: List[int]  # List of Pokémon IDs in storage
+
+    class Config:
+        orm_mode = True
+```
+
 
 
 ## **PokeIteration 1: Create Teams for Battles**
@@ -63,7 +81,7 @@ In this exercise, you will create teams that will be used for Pokémon battles. 
 
 
 
-## **Exercise 2: Add Pokémon to a Team**
+## PokeIteration 2: Add Pokémon to a Team
 
 Now that you've created a team for the trainer, you need to **add Pokémon** to that team.
 
@@ -94,3 +112,124 @@ Now that you've created a team for the trainer, you need to **add Pokémon** to 
 - `"Pikachu has been successfully added to the 'Ash's Team'."`
 
 
+### PokeIteration 3: **Release a Pokémon from the Team**
+
+In this exercise, you will create an endpoint that allows you to either release a Pokémon from your team. Releasing means letting go of the Pokémon
+
+### Validation:
+- Ensure that the team has a Pokémon before attempting to release it.
+  
+- Validate that the specified Pokémon ID belongs to the trainer’s team.
+
+  
+### Error Handling:
+- If you try to release a Pokémon when the team is empty, return an error: "The team is currently empty. You cannot release any Pokémon."
+  
+- Invalid Pokémon ID: If the Pokémon ID does not exist in the team, return a 404 Not Found: "Pokémon with ID {pokemon_id} not found in your team."
+
+### Endpoint Structure:
+
+- DELETE /team/{pokemon_id}/release: Release the Pokémon, permanently deleting it.
+
+
+## PokeIteration 4: View Pokémon Team
+
+Now that you’ve added Pokémon to your team, it’s time to view the entire team.
+
+### Tasks:
+- Create an endpoint that retrieves all the Pokémon currently in your team.
+  
+### Response:
+- If the team is empty, return a message: "Your team has no Pokémon yet.".
+  
+### Example Postman Request:
+GET /team
+
+## PokeIteration 5: View Pokémon with Abilities, Moves, and Type
+
+It's time to bring all the data together! In this exercise, you will create an endpoint that retrieves a Pokémon's full details, including its abilities, moves, and types.
+
+### Tasks:
+
+- Create an endpoint to view a specific Pokémon with all its relevant details: 
+Abilities (retrieved from the abilities collection).
+Moves (retrieved from the moves collection).
+Type (retrieved from the pokemon_types collection).
+
+### Validations:
+- Ensure the Pokémon exists in the database.
+- Return a 404 Not Found if the Pokémon doesn’t exist.
+  
+### Error Handling:
+- If the Pokémon does not exist, return an error message: "Pokémon not found!".
+  
+### Example Postman Request:
+GET /pokemon/{pokemon_id}/details
+
+
+## PokeIteration 6: Battle a Random Wild Pokémon
+
+In this exercise, you'll create an endpoint that selects a Pokémon from a specific trainer's team based on its position in the team, and makes it battle a random wild Pokémon encountered in the tall grass.
+
+
+### Steps
+
+The endpoint will receive:
+
+- The trainer's ID.
+- The position of the Pokémon in the trainer’s team (0-indexed).
+
+Battle logic:
+
+The battle will follow a simple structure based on the Pokémon's stats:
+
+- The Pokémon with the higher speed will attack first.
+- The damage will be calculated based on the attacker's attack stat and the defender's defense stat.
+- The Pokémon that reaches 0 HP first loses.
+
+Response format:
+
+The response should include the details of the battle result:
+
+- The trainer's Pokémon (name, stats).
+- The wild Pokémon (name, stats).
+- The winner of the battle.
+
+### Validations
+
+- Ensure the trainer exists and has a Pokémon in the specified position.
+- If the position is invalid (i.e., no Pokémon in that position), return an error.
+  
+### Error Handling
+
+- If the trainer does not exist, return a 404 Not Found error: "Trainer not found.".
+- If the position is invalid, return a 400 Bad Request: "Invalid Pokémon position.".
+- If there are no Pokémon in the wild database, return a 500 Internal Server Error.
+
+### Response :
+```json
+{
+  "trainer_pokemon": {
+    "name": "Pikachu",
+    "level": 12,
+    "hp": 35,
+    "attack": 55,
+    "defense": 40,
+    "speed": 90
+  },
+  "wild_pokemon": {
+    "name": "Zubat",
+    "level": 8,
+    "hp": 40,
+    "attack": 45,
+    "defense": 35,
+    "speed": 55
+  },
+  "battle_result": {
+    "winner": "trainer_pokemon",
+    "loser": "wild_pokemon",
+    "details": "Pikachu attacked first with higher speed, dealt 15 damage, and won the battle."
+  }
+}
+```
+f
