@@ -8,6 +8,10 @@ Welcome back, Trainers! Now that you've successfully built your Pokémon API, it
 
 You'll also implement new validation rules and error handling to ensure your API is robust and user-friendly. Get ready to level up your coding skills!
 
+
+<div align="center"> <img src="https://github.com/user-attachments/assets/c8ec83d3-97e2-4d80-8c3b-7f1ad58e8569" height="450" width="800"> </div>
+
+
 ## Requirements
 
 - Ensure your existing Pokémon API is up and running.
@@ -17,6 +21,8 @@ You'll also implement new validation rules and error handling to ensure your API
 - Clone this repo into your code/labs folder
 
 - Use Postman to test and interact with the API endpoints.
+
+
 
 ## PokeIteration 0: Structuring the Project with the Model-View-Controller (MVC) Pattern
 
@@ -57,7 +63,7 @@ class TrainerSchema(BaseModel):
     class Config:
         orm_mode = True
 ```
-
+<div align="center"> <img src="https://github.com/user-attachments/assets/0ac8b4b1-0a4c-472a-af4d-24277331c0d9" height="300" width="600"> </div>
 
 
 ## **PokeIteration 1: Create Teams for Battles**
@@ -123,6 +129,7 @@ In this exercise, you will create an endpoint that allows you to either release 
 
 - DELETE /team/{pokemon_id}/release: Release the Pokémon, permanently deleting it.
 
+<div align="center"> <img src="https://github.com/user-attachments/assets/bd8aa548-8294-4ff9-80a2-596f412a7628" height="300" width="600"> </div>
 
 ## PokeIteration 4: Filter and Sort Pokémons
 
@@ -154,9 +161,14 @@ Type (retrieved from the pokemon_types collection).
 ### Example Postman Request:
 GET /pokemon/{pokemon_id}/details
 
+<div align="center"> <img src="https://github.com/user-attachments/assets/35406ace-c625-40ed-9c02-b011b5b9f218" height="300" width="600"> </div>
+
 ## PokeIteration 6: **Deploy the Pokémon API with Uvicorn**
 
+
+
 ---
+
 
 ## IABonus : Explore and Implement a Hugging Face Model with FastAPI
 
@@ -280,6 +292,8 @@ The response should confirm the successful evolution, showing both the old Poké
   "message": "Bulbasaur has evolved into Ivysaur and replaced in the team."
 }
 ```
+<div align="center"> <img src="https://github.com/user-attachments/assets/94dd3642-d435-4f36-a0c9-6d29737fd992" height="300" width="600"> </div>
+
 ## Submission
 
 Upon completion, run the following commands:
