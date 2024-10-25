@@ -154,11 +154,17 @@ Type (retrieved from the pokemon_types collection).
 ### Example Postman Request:
 GET /pokemon/{pokemon_id}/details
 
-
 ## PokeIteration 6: **Deploy the Pokémon API with Uvicorn**
 
-
 ---
+
+## IABonus : Explore and Implement a Hugging Face Model with FastAPI
+
+In this exercise, you’ll explore Hugging Face’s Model Hub to select and implement a different NLP model in a FastAPI application. The goal is to integrate a model that performs a specific task, such as text translation, summarization, or sentiment analysis.
+
+- Visit Hugging Face Model Hub.
+- Filter for NLP models and choose one that interests you (e.g., for translation, text summarization, sentiment analysis).
+- Review the model documentation to understand how it works and the data it processes.
 
 # PokeBonus
 
