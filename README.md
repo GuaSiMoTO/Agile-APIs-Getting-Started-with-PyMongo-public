@@ -181,7 +181,6 @@ In this exercise, you’ll explore Hugging Face’s Model Hub to select and impl
 - Review the model documentation to understand how it works and the data it processes.
 
 <div align="center"> <img src="https://github.com/user-attachments/assets/8833c6b7-f055-4ccb-b1db-76cab8fccda1" height="300" width="650"> </div>
-# PokeBonus
 
 ## PokeBonus 1: Battle a Random Wild Pokémon
 
