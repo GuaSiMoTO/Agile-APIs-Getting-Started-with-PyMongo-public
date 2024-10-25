@@ -81,6 +81,8 @@ In this exercise, you will create teams that will be used for Pokémon battles. 
 
 ## PokeIteration 2: Add Pokémon to a Team
 
+<img src="https://github.com/user-attachments/assets/cf153b5c-045f-48a0-9b92-3c13b8138377" height="600" width="400" align="right">
+
 Now that you've created a team for the trainer, you need to **add Pokémon** to that team.
 
 ### **Tasks:**
@@ -178,6 +180,7 @@ In this exercise, you’ll explore Hugging Face’s Model Hub to select and impl
 - Filter for NLP models and choose one that interests you (e.g., for translation, text summarization, sentiment analysis).
 - Review the model documentation to understand how it works and the data it processes.
 
+<div align="center"> <img src="https://github.com/user-attachments/assets/8833c6b7-f055-4ccb-b1db-76cab8fccda1" height="300" width="650"> </div>
 # PokeBonus
 
 ## PokeBonus 1: Battle a Random Wild Pokémon
