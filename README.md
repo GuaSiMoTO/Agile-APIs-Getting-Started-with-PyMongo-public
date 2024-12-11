@@ -101,7 +101,7 @@ Now that you've created a Trainers for the trainer, you need to **add Pokémon**
 - If the Pokémon is already in the team, return a **409 Conflict** error with the message: `"This Pokémon is already in your team!"`.
 
 ### **Example Postman Request:**
-- `POST /team/{team_id}/add-pokemon`
+- `PUT /team/{team_id}/add-pokemon`
   
 ```json
 {
