@@ -67,24 +67,24 @@ class TrainerSchema(BaseModel):
 <div align="center"> <img src="https://github.com/user-attachments/assets/0ac8b4b1-0a4c-472a-af4d-24277331c0d9" height="300" width="600"> </div>
 
 
-## **PokeIteration 1: Create Teams for Battles**
+## **PokeIteration 1: Create Trainers for Battles**
 
-In this exercise, you will create teams that will be used for Pokémon battles. We will implement an endpoint to **create a team** for either the player.
+In this exercise, you will create Trainers that will be used for Pokémon battles. We will implement an endpoint to **create a Trainers** for either the player.
 
 ### **Tasks:**
-- Create an endpoint to **create a new team**.
+- Create an endpoint to **create a new Trainers**.
 
 ### **Example Postman Request:**
-- `POST /team/create`
+- `POST /Trainers/create`
 
 ### **Response:**
-- `"Team 'Ash's Team' has been successfully created."`
+- `"Team 'Ash's' has been successfully created."`
 
 ## PokeIteration 2: Add Pokémon to a Team
 
 <img src="https://github.com/user-attachments/assets/cf153b5c-045f-48a0-9b92-3c13b8138377" height="600" width="400" align="right">
 
-Now that you've created a team for the trainer, you need to **add Pokémon** to that team.
+Now that you've created a Trainers for the trainer, you need to **add Pokémon** to that team.
 
 ### **Tasks:**
 
