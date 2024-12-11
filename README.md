@@ -37,6 +37,7 @@ Before diving into coding, it's essential to ensure your project is structured f
 │   ├── /controllers   # Business logic
 │   ├── /routes        # API endpoints
 │   ├── /schemas       # Pydantic schemas for data validation
+│   ├── /connection    # connection with database
 │   └── main.py        # Application entry point
 └── README.md          # Project documentation
 ```
